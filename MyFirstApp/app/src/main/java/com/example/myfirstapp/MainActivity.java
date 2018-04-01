@@ -40,11 +40,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.ByteBuffer;
@@ -92,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 takePicture();
             }
         });
+
     }
     TextureView.SurfaceTextureListener textureListener = new TextureView.SurfaceTextureListener() {
         @Override
@@ -199,32 +197,19 @@ public class MainActivity extends AppCompatActivity {
                         Log.v("Tag1", "Took Picture!");
                         buffer.get(bytes);
 
-                        String base64 =  Base64.encodeToString(bytes, Base64.DEFAULT);
+                        String base64 = Base64.encodeToString(bytes, Base64.DEFAULT);
                         Log.v("Tag", String.valueOf(base64.length()));
 
                         Log.v("Tag2", "Starting HTTP Request");
 
                         sendPost(base64);
 
-                        save(bytes);
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
+                        //save(bytes);
+                    } catch (Exception e) {
                         e.printStackTrace();
                     } finally {
                         if (image != null) {
                             image.close();
-                        }
-                    }
-                }
-                private void save(byte[] bytes) throws IOException {
-                    OutputStream output = null;
-                    try {
-                        output = new FileOutputStream(file);
-                        output.write(bytes);
-                    } finally {
-                        if (null != output) {
-                            output.close();
                         }
                     }
                 }
@@ -399,6 +384,15 @@ public class MainActivity extends AppCompatActivity {
 
                     Log.v("TAGRESPONSE", response);
                     conn.disconnect();
+                    if (response.equals("N")) {
+                        openRecycleActivity(response);
+                    }
+                    else if (response.equals("E")) {
+                        openRecycleActivity(response);
+                    }
+                    else {
+                        openTrashActivity(response);
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
