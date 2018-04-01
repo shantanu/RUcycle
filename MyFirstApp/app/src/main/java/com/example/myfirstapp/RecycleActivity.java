@@ -1,7 +1,12 @@
 package com.example.myfirstapp;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class RecycleActivity extends AppCompatActivity {
@@ -10,5 +15,24 @@ public class RecycleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycle);
+
+        Log.v("TAG", "In Recycle");
+
+        // Get the Intent that started this activity and extract the string
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+
+        // Capture the layout's TextView and set the string as its text
+        TextView textView = findViewById(R.id.type_recycle);
+        textView.setText("Categorized as: " + message);
+
+
+        Button btn = findViewById(R.id.btn_backToCameraRecycle);
+
+    }
+
+    public void backToCamera (View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

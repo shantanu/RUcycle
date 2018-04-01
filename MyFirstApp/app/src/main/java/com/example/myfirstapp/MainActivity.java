@@ -356,6 +356,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
+                    //closeCamera();
                     URL url = new URL("https://amperess.lib.id/recycle@dev/");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("POST");
@@ -381,16 +382,20 @@ public class MainActivity extends AppCompatActivity {
                     DataInputStream is = new DataInputStream(conn.getInputStream());
 
                     String response = inputStreamToString(conn.getInputStream());
-
+                    response = response.substring(3, response.length()-3);
+                    response = response.toLowerCase();
                     Log.v("TAGRESPONSE", response);
                     conn.disconnect();
-                    if (response.equals("N")) {
+                    if (response.equals("cardboard") ||
+                            response.equals("metal") ||
+                            response.equals("paper") ||
+                            response.equals("plastic") ||
+                            response.equals("battery") ||
+                            response.equals("laptop") ||
+                            response.equals("glass")) {
                         openRecycleActivity(response);
                     }
-                    else if (response.equals("E")) {
-                        openRecycleActivity(response);
-                    }
-                    else {
+                    else if (response.equals("trash")) {
                         openTrashActivity(response);
                     }
                 } catch (Exception e) {

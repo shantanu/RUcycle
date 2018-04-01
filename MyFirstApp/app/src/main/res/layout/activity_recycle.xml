@@ -14,17 +14,17 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp"
-        android:layout_padding="12dp"
+        android:padding="12dp"
         android:textSize="36sp"
         android:gravity="center"
         tools:text="It's Recyclable!"/>
 
     <TextView
-        android:id="@+id/type_trash"
+        android:id="@+id/type_recycle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text_trash"
-        android:layout_padding="12dp"
+        android:padding="12dp"
         android:gravity="center"
         android:textSize="20sp"
         tools:text="Categorized as: "/>
@@ -46,11 +46,12 @@
         tools:layout_editor_absoluteY="64dp" />
 
     <Button
-        android:id="@+id/btn_backToCamera"
+        android:id="@+id/btn_backToCameraRecycle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="25dp"
+        android:onClick="backToCamera"
         android:text="Back to Camera"/>
 </RelativeLayout>
