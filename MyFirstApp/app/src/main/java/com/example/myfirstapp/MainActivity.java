@@ -351,6 +351,14 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, torecycle);
         startActivity(intent);
     }
+
+    private void openElectronicActivity(String torecycle) {
+        Log.v("Tag3", "Open Electronic");
+
+        Intent intent = new Intent(this, ElectronicActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, torecycle);
+        startActivity(intent);
+    }
     public void sendPost(final String base64) {
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -390,10 +398,12 @@ public class MainActivity extends AppCompatActivity {
                             response.equals("metal") ||
                             response.equals("paper") ||
                             response.equals("plastic") ||
-                            response.equals("battery") ||
-                            response.equals("laptop") ||
                             response.equals("glass")) {
                         openRecycleActivity(response);
+                    }
+                    else if (response.equals("battery") ||
+                            response.equals("laptop")) {
+                        openElectronicActivity(response);
                     }
                     else if (response.equals("trash")) {
                         openTrashActivity(response);
