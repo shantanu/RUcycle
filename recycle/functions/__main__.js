@@ -47,8 +47,8 @@ function queryWolfram1(modelLink, img, callback){
     var client1 = new Client1();
     client1.get(modelLink, img, function(response) {
         console.log("I've been got");
-        response = response.substring(4);
-        response = response.substring(0, response.indexOf('"'));
+        //response = response.substring(4);
+        //response = response.substring(0, response.indexOf('"'));
         return callback(null, response);
     });
 }
