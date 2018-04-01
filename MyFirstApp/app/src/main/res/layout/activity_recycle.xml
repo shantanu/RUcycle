@@ -16,7 +16,7 @@
         android:layout_marginTop="12dp"
         android:gravity="center"
         android:textSize="36sp"
-        tools:text="It's Recyclable!" />
+        android:text="It's Recyclable!" />
 
     <ImageView
         android:id="@+id/imageView"

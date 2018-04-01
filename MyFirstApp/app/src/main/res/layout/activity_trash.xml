@@ -1,38 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrashActivity">
+    android:background="@color/colorBackground"
+    tools:context=".RecycleActivity">
 
     <TextView
-        android:id="@+id/text_trash"
+        android:id="@+id/text_recycle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:text="It's Trash" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="338dp"
+        android:layout_height="318dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
-        android:textSize="36sp"
+        android:layout_marginTop="58dp"
+        android:contentDescription="image_desc"
         android:gravity="center"
-        tools:text="It's Trash!"/>
+        app:srcCompat="@drawable/trash" />
 
     <TextView
         android:id="@+id/type_trash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/text_trash"
+        android:layout_marginBottom="80dp"
         android:gravity="center"
         android:textSize="20sp"
-        tools:text="Categorized as: "/>
+        tools:ignore="UnknownIdInLayout"
+        tools:text="Categorized as: " />
+
     <Button
         android:id="@+id/btn_backToCamera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:text="Back to Camera"/>
+        android:layout_marginBottom="12dp"
+        android:text="Back to Camera" />
 </RelativeLayout>
