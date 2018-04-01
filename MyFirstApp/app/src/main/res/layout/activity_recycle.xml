@@ -9,9 +9,35 @@
 
     <TextView
         android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="464dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Recyclable"
+        />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="14dp"
+        android:src="drawable-xhdpi/recycle.jpg" />
+
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recycle"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="135dp"/>
+        android:layout_centerInParent="true"
+        android:contentDescription="image_desc"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/recycle"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="64dp" />
+
 </android.support.constraint.ConstraintLayout>
