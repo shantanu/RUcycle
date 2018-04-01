@@ -14,10 +14,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp"
-        android:padding="12dp"
         android:textSize="36sp"
         android:gravity="center"
-        tools:text="It's Trash!"/>
+        android:text="It's Trash!"/>
 
     <TextView
         android:id="@+id/type_trash"
@@ -25,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/text_trash"
-        android:padding="12dp"
         android:gravity="center"
         android:textSize="20sp"
         tools:text="Categorized as: "/>
