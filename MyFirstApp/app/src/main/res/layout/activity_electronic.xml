@@ -42,22 +42,22 @@
 
     <Button
         android:id="@+id/btn_toMaps"
-        android:layout_width="202dp"
+        android:layout_width="188dp"
         android:layout_height="70dp"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/type_electronic"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginTop="-75dp"
         android:onClick="toMaps"
         android:text="Show me the nearest Electronic Recyclying Center!" />
 
     <Button
         android:id="@+id/btn_backToCamera"
-        android:layout_width="156dp"
+        android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/type_electronic"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="-75dp"
         android:onClick="backToCamera"
         android:text="Back to Camera" />
