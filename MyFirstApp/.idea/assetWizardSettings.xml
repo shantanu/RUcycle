@@ -19,7 +19,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Desktop/recycle-clipart-M9TpdgqiE.jpg" />
+                                      <entry key="imageAsset" value="$PROJECT_DIR$/../recycle.jpg" />
+                                      <entry key="outputName" value="recycle" />
                                     </map>
                                   </option>
                                 </PersistentState>
