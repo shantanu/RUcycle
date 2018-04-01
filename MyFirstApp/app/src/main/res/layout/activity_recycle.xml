@@ -8,21 +8,26 @@
     tools:context=".RecycleActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="300dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="464dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/text_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:layout_padding="12dp"
+        android:textSize="36sp"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="Recyclable"
-        />
+        tools:text="It's Recyclable!"/>
+
+    <TextView
+        android:id="@+id/type_trash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_trash"
+        android:layout_padding="12dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        tools:text="Categorized as: "/>
 
     <ImageView
         android:layout_width="fill_parent"
@@ -40,4 +45,12 @@
         tools:layout_editor_absoluteX="42dp"
         tools:layout_editor_absoluteY="64dp" />
 
+    <Button
+        android:id="@+id/btn_backToCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:text="Back to Camera"/>
 </RelativeLayout>
