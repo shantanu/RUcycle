@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/recycle" />
 
     <TextView
-        android:id="@+id/type_trash"
+        android:id="@+id/type_recycle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -42,11 +42,12 @@
         tools:text="Categorized as: " />
 
     <Button
-        android:id="@+id/btn_backToCamera"
+        android:id="@+id/btn_backToCameraRecycle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="12dp"
-        android:text="Back to Camera" />
+        android:onClick="backToCamera"
+        android:text="Back to Camera"/>
 </RelativeLayout>
