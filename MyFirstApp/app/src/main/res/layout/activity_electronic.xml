@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorBackground"
-    tools:context=".RecycleActivity">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackground"
+                tools:context=".ElectronicActivity">
 
     <TextView
-        android:id="@+id/text_recycle"
+        android:id="@+id/text_electronic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -16,7 +16,7 @@
         android:layout_marginTop="12dp"
         android:gravity="center"
         android:textSize="36sp"
-        android:text="It's Trash!" />
+        android:text="It's Electronic!" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/trash" />
 
     <TextView
-        android:id="@+id/type_trash"
+        android:id="@+id/type_electronic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -39,6 +39,16 @@
         android:textSize="20sp"
         tools:ignore="UnknownIdInLayout"
         tools:text="Categorized as: " />
+
+    <Button
+        android:id="@+id/btn_toMaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:onClick="toMaps"
+        android:text="Show me the Nearest Electronic Recyclic Center!" />
 
     <Button
         android:id="@+id/btn_backToCamera"

@@ -33,6 +33,8 @@
         </activity>
         <activity android:name=".TrashActivity">
         </activity>
+        <activity android:name=".ElectronicActivity">
+        </activity>
     </application>
 
 </manifest>
